@@ -9,7 +9,6 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.example.dattatreya.barterapp.LogInActivity"
     tools:showIn="@layout/activity_log_in">
 
 
@@ -17,7 +16,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textEmailAddress"
-        android:hint="Enter Your Email Adress"
+        android:hint="Enter Your Email Adress here"
         android:ems="10"
         android:id="@+id/editText"
         android:layout_alignParentTop="true"
