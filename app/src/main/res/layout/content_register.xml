@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.dattatreya.barterapp.RegisterActivity"
+    tools:showIn="@layout/activity_register"
+    >
+
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:hint="Name"
+        android:ems="10"
+        android:id="@+id/pername"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_toStartOf="@+id/editphoto" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:ems="10"
+        android:hint="Email"
+        android:id="@+id/editemail"
+        android:layout_below="@+id/pername"
+        android:layout_alignStart="@+id/pername"
+        android:layout_alignEnd="@+id/pername" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:hint="Password"
+        android:id="@+id/editpasswrd"
+        android:layout_below="@+id/editemail"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:hint="Repeat PassWord"
+        android:id="@+id/RepeatPass"
+        android:layout_below="@+id/editpasswrd"
+        android:layout_alignEnd="@+id/editpasswrd" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="phone"
+        android:ems="10"
+        android:hint="Phone Num"
+        android:id="@+id/EditPhoneNum"
+        android:layout_below="@+id/RepeatPass"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:inputType="date"
+        android:hint="Date Of Birth"
+        android:ems="10"
+        android:id="@+id/editDOB"
+        android:layout_alignTop="@+id/editDateSel"
+        android:layout_alignParentStart="true"
+        android:layout_toStartOf="@+id/editDateSel" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/calender"
+        android:onClick="selectDate"
+        android:id="@+id/editDateSel"
+        android:layout_below="@+id/EditPhoneNum"
+        android:layout_alignEnd="@+id/EditPhoneNum" />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/editDOB"
+        android:id="@+id/radioGroup">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="male"
+            android:id="@+id/radioButton1" />
+        <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="female"
+        android:id="@+id/radioButton2" />
+
+    </RadioGroup>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="220dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/radioGroup"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="25dp"
+        android:id="@+id/linearLayout">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="select your location.."
+            android:id="@+id/regtextView" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:id="@+id/addrstxt" />
+    </LinearLayout>
+
+    <ImageButton
+        android:layout_width="120dp"
+        android:layout_height="130dp"
+        android:src="@drawable/map"
+        android:onClick="pickPlace"
+        android:id="@+id/imageButton3"
+        android:layout_below="@+id/radioGroup"
+        android:layout_alignParentEnd="true" />
+
+    <ImageButton
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:src="@drawable/person"
+        android:id="@+id/editphoto"
+        android:onClick="uploadImage"
+        android:layout_alignTop="@+id/pername"
+        android:layout_alignEnd="@+id/editpasswrd" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:background="@color/pinku"
+        android:textColor="@color/white"
+        android:id="@+id/button2"
+        android:onClick="registerMadu"
+        android:layout_below="@+id/imageButton3"
+        android:layout_centerHorizontal="true" />
+
+
+</RelativeLayout>

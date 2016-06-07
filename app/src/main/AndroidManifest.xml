@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.datta.barterapplication">
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyDrJV8WuHMw0JQCaEXAmKPykc6OYtI0Qao" />
+
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".LogInActivity"
+            android:label="@string/title_activity_log_in"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".RegisterActivity"
+            android:label="@string/title_activity_register"
+            android:parentActivityName=".LogInActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".MenuActivity"
+            android:label="@string/title_activity_menu"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".AddItemActivity"
+            android:label="@string/title_activity_add_item"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".CatLogCardActivity"
+            android:label="@string/title_activity_cat_log_card"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".FinalyItemDisplayActivity"
+            android:label="@string/title_activity_finaly_item_display"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+    </application>
+
+</manifest>
